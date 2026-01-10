@@ -3,122 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Dhivya Bharathi - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    
     <style>
-        /* General Styles */
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            color: #333;
-            background-color: #f4f4f9;
+            background-color: #2b1414; /* Deep Maroon/Dark Brown background */
+            color: #e0e0e0; /* Off-white text */
+            font-family: 'Lora', serif; /* Body font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
         }
 
+        /* Main Container to limit width and center content */
         .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            width: 100%;
+            gap: 80px; /* Space between the two columns */
         }
 
-
-        /**/
-        /* Header Section */
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 60px 0;
-            text-align: center;
+        /* --- Left Column (Bio) --- */
+        .left-column {
+            flex: 2; /* Takes up roughly 66% of the space */
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: #f0f0f0;
         }
 
-        header p {
-            font-size: 1.2rem;
+        /* The Gold Highlight Color */
+        .highlight {
+            color: #d4a658; /* Muted Gold/Yellow */
+        }
+
+        .text-block {
+            font-family: 'Lora', serif; /* Using a serif that looks slightly typewriter-ish */
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            text-align: justify; /* Justified text block like the image */
+            font-style: italic;
             opacity: 0.9;
         }
 
-        /* Experience Section */
-        .section-title {
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            color: #2c3e50;
+        /* --- Right Column (Pursuits) --- */
+        .right-column {
+            flex: 1; /* Takes up remaining space */
+            padding-top: 15px; /* Slight alignment adjustment */
         }
 
-        .experience-item {
-            background: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #d4a658; /* Gold */
+            margin-bottom: 40px;
+            font-weight: 400;
         }
 
-        .job-title {
-            font-weight: bold;
+        ul {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 20px;
+            border-left: 1px solid transparent; /* Keeps alignment clean */
+        }
+
+        /* Custom Bullet Point */
+        li::before {
+            content: "•";
+            color: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
             font-size: 1.2rem;
+            line-height: 1.2rem;
+        }
+
+        .role {
             display: block;
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 5px;
         }
 
-        .company-date {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
+        .date {
+            display: block;
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-bottom: 2px;
+            font-style: italic;
         }
 
-        /* Contact Footer */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
-            color: #7f8c8d;
+        .company {
+            display: block;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Dhivya Bharathi</h1>
-            <p>Student</p>
-        </div>
-    </header>
-
     <div class="container">
-        
-        <h2 class="section-title">Professional Experience</h2>
+        <div class="left-column">
+            <h1>I am <span class="highlight">Dhivya Bharathi</span></h1>
+            
+            <div class="text-block">
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text
+            </div>
+        </div>
 
-        <div class="experience-item">
-            <span class="job-title">Senior Web Developer</span>
-            <div class="company-date">Tech Solutions Inc. | 2021 - Present</div>
+        <div class="right-column">
+            <h2>Pursuits</h2>
+            
             <ul>
-                <li>Led a team of 4 developers to redesign the flagship e-commerce platform.</li>
-                <li>Improved site loading speed by 40% using optimized React components.</li>
+                <li>
+                    <span class="role">Intern</span>
+                    <span class="date">June 2025 - Dec 2025</span>
+                    <span class="company">Makerspace</span>
+                </li>
+
+                <li>
+                    <span class="role">Mentor</span>
+                    <span class="date">April 2025 - August 2025</span>
+                    <span class="company">BuildUp Global</span>
+                </li>
+
+                <li>
+                    <span class="role">B.Sc. Comp Sci</span>
+                    <span class="date">2024 - 2028</span>
+                    <span class="company">Ashoka University</span>
+                </li>
             </ul>
         </div>
-
-        <div class="experience-item">
-            <span class="job-title">Junior Developer</span>
-            <div class="company-date">Creative Web Agency | 2019 - 2021</div>
-            <ul>
-                <li>Developed responsive landing pages for over 20+ clients.</li>
-                <li>Collaborated with design teams to translate Figma wireframes into clean code.</li>
-            </ul>
-        </div>
-
-        <h2 class="section-title">Education</h2>
-        <div class="experience-item">
-            <span class="job-title">B.S. in Computer Science</span>
-            <div class="company-date">State University | Class of 2019</div>
-        </div>
-
     </div>
-
-    <footer>
-        <p>&copy; 2026 Dhivya Bharathi. Built with HTML & CSS.</p>
-    </footer>
 
 </body>
 </html>
